@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alien Registration Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="photos/align.webp" type="image/x-icon">
+</head>
+<body>
+  <h1 class="portal-heading">🛸 Alien Registration Portal 🪐</h1>
+
+  <div class="alien-container">
+    <!-- Left Side Image -->
+    <div class="left-panel"></div>
+
+    <!-- Right Side Form -->
+    <div class="right-panel">
+      <h2>Enter your intergalactic credentials 👽</h2>
+
+      <form id="alienForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="planetName">Planet Name</label>
+            <input type="text" id="planetName" placeholder="e.g. Mars9" />
+            <small id="planetError" style="color:#ff8080;"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="antennaCount">Antenna Count</label>
+            <input type="number" id="antennaCount" placeholder="e.g. 4" />
+            <small id="antennaError" style="color:#ff8080;"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="alienID">Alien ID</label>
+            <input type="text" id="alienID" placeholder="ZOR-AB_1234@UFO" />
+            <small id="idError" style="color:#ff8080;"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="landingDate">Landing Date</label>
+            <input type="date" id="landingDate" />
+            <small id="dateError" style="color:#ff8080;"></small>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="phrase">Favorite Human Phrase</label>
+          <textarea id="phrase" placeholder="e.g. Hello Earthlings! 👋"></textarea>
+          <small id="phraseError" style="color:#ff8080;"></small>
+        </div>
+
+        <button type="submit">Engage Warp Drive 🚀</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="validation.js"></script>
+</body>
+</html>
