@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Caption Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Meme Caption Lab</h1>
+            <p>Create, Edit, and Delete Your Memes!</p>
+        </header>
+
+        <!-- Meme Creation Section -->
+        <section class="create-section">
+            <h2>Create New Meme</h2>
+            
+            <div class="template-selector">
+                <h3>Select Template:</h3>
+                <div class="template-grid" id="templateGrid">
+                    <!-- Templates will be loaded here dynamically -->
+                </div>
+            </div>
+
+            <div class="caption-inputs">
+                <div class="input-group">
+                    <label for="topCaption">Top Caption:</label>
+                    <input type="text" id="topCaption" placeholder="Enter top caption...">
+                </div>
+                
+                <div class="input-group">
+                    <label for="bottomCaption">Bottom Caption:</label>
+                    <input type="text" id="bottomCaption" placeholder="Enter bottom caption...">
+                </div>
+
+                <button class="btn btn-create" onclick="createMeme()">
+                    Create Meme
+                </button>
+            </div>
+        </section>
+
+        <!-- Meme Gallery Section -->
+        <section class="gallery-section">
+            <h2>Your Memes</h2>
+            <div class="meme-gallery" id="memeGallery">
+                <!-- Memes will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Edit Meme Caption</h2>
+            
+            <div class="edit-preview">
+                <img id="editPreviewImg" src="" alt="Meme Preview">
+            </div>
+
+            <div class="input-group">
+                <label for="editTopCaption">Top Caption:</label>
+                <input type="text" id="editTopCaption" placeholder="Enter top caption...">
+            </div>
+            
+            <div class="input-group">
+                <label for="editBottomCaption">Bottom Caption:</label>
+                <input type="text" id="editBottomCaption" placeholder="Enter bottom caption...">
+            </div>
+
+            <button class="btn btn-save" onclick="saveEdit()">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
